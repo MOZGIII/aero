@@ -1,0 +1,96 @@
+table.layout {
+    border: none;
+    width: 800px;
+}
+
+table.layout thead tr th {
+    background-color: #BBDDFF;
+    color: Blue;
+    padding: 5px 5px 5px 5px;
+    text-align: center;
+    vertical-align: middle;
+    border-bottom: 1px Solid Blue;
+    font-size: x-large;
+}
+
+table.layout tbody tr th {
+    background-color: #BBDDFF;
+    color: Blue;
+    padding: 5px 5px 5px 5px;
+    text-align: left;
+    vertical-align: top;
+    border-right: 1px Solid Blue;
+    width: 200px;
+}
+
+table.layout tbody tr th ul{
+    padding: 6px;
+    list-style-type: none;
+}
+
+table.layout tbody tr th ul li{
+    background-color: #EEFFFF;
+    padding: 5px 5px 5px 5px;
+    width: 180px;
+    margin: 5px 5px 5px 5px;
+    border: 1px Solid #8888FF;
+}
+
+table.layout tbody tr th ul li a:link, table.layout tbody tr th ul li a:visited{
+    text-decoration: none;
+    color: #2200FF;
+    font-weight: normal;
+}
+
+table.layout tbody tr th ul li a:hover, table.layout tbody tr th ul li a:active{
+    text-decoration: none;
+    color: #557788;
+    font-weight: normal;
+}
+
+table.layout tbody tr td {
+    padding: 10px 10px 10px 10px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+table.list{
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px Solid Blue;
+}
+
+table.list thead tr{
+    background-color: #BBDDFF;
+}
+
+table.list thead tr th{
+    border: none;
+    text-align: center;
+    vertical-align: middle;
+    font-size: medium;
+}
+
+table.list tbody tr th{
+    text-align: left;
+    vertical-align: middle;
+    font-size: medium;
+}
+
+table.list tfoot tr th{
+    border-width: 1px 0px 0px 0px;
+    border-style: solid none none none;
+    border-color: Blue;
+    text-align: center;
+    vertical-align: middle;
+    font-size: medium;
+    background-color: white;
+}
+
+table.list tbody tr.list1{
+    background-color: #EEEEFF;
+}
+
+table.list tbody tr.list0{
+    background-color: #DDDDFF;
+}
