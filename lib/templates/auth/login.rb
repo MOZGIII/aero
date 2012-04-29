@@ -1,3 +1,4 @@
+# coding: UTF-8
 "
 <form name = 'auth' method = 'post' action = 'aero.rb'>
   <input type = 'hidden' name = 'action' value = '#{@reverse_action.to_s}'>

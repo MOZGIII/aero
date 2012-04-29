@@ -1,3 +1,4 @@
+# coding: UTF-8
 require 'db_core/models/model'
 
 class FlightStatus < Model

@@ -1,3 +1,4 @@
+# coding: UTF-8
 module Helper
   def companies_select(name, selected)
     "<select name = '#{name}'>" +

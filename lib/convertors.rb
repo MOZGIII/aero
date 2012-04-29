@@ -1,3 +1,4 @@
+# coding: UTF-8
 module Convertors
   def Convertors.controller_file_to_class_name(file)
     File.basename(file)[0..-14].split(/_/).map{ |i| i.capitalize }.join

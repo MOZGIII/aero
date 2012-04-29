@@ -1,3 +1,4 @@
+# coding: UTF-8
 class Model
   # Описывает какие поля не надо преобразовывать в NULL
   def Model.not_needs_to_set_null()

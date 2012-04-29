@@ -1,3 +1,4 @@
+# coding: UTF-8
 require 'db_core/db_driver'
 
 # Подключает все файлы db_core/model/*.rb

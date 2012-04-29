@@ -1,3 +1,4 @@
+# coding: UTF-8
 class AuthController < Controller
   def is_authorized_action?()
     return false

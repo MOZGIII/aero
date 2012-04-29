@@ -1,5 +1,4 @@
-# To change this template, choose Tools | Templates
-# and open the template in the editor.
+# coding: UTF-8
 
 class User < Model
   def User.create_table(connection)

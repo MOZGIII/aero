@@ -1,3 +1,4 @@
+# coding: UTF-8
 "
 <form name = 'aero' action = 'aero.rb' method = 'post'>
 <input type = 'hidden' name = 'controller' value = 'Flights'>

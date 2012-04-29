@@ -1,3 +1,4 @@
+# coding: UTF-8
 count = 0
 "
 <table class = 'list'>

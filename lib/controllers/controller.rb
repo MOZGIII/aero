@@ -1,3 +1,4 @@
+# coding: UTF-8
 require 'cgi'
 require 'cgi/session'
 require 'cgi/session/pstore'

@@ -1,3 +1,4 @@
+# coding: UTF-8
 class FlightsController < Controller
   def is_authorized_action?()
     !([:departure_list, :arrival_list].include?(@action))
