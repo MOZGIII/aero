@@ -20,9 +20,11 @@ echo "CREATE USER worker WITH PASSWORD 'worker' CREATEDB;" | psql -p $PORT templ
 
 echo "Deploying files"
 
+mkdir -p /var/www/cgi-bin/$LOGIN
 cd /var/www/cgi-bin/$LOGIN
 ln -sf $PROJECT_ROOT/lib aero
 
+mkdir -p /var/www/html/$LOGIN
 cd /var/www/html/$LOGIN
 ln -sf $PROJECT_ROOT/lib/stylesheets
 
