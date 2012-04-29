@@ -25,3 +25,6 @@ nb-configuration.xml
 .*.sw[a-z]
 *.un~
 Session.vim
+
+# Vagrant
+.vagrant
