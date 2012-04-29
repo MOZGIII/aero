@@ -1,6 +1,9 @@
 #!/usr/local/bin/ruby
 # coding: UTF-8
 
+$: << "."
+$: << File.dirname(__FILE__)
+
 require 'cgi'
 require 'controllers/controller'
 require 'convertors'
