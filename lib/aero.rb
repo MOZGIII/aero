@@ -1,6 +1,9 @@
 #!/usr/local/bin/ruby
 # coding: UTF-8
 
+Encoding.default_external = "UTF-8"
+Encoding.default_internal = "UTF-8"
+
 $: << "."
 $: << File.dirname(__FILE__)
 
