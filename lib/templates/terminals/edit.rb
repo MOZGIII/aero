@@ -1,4 +1,5 @@
 # coding: UTF-8
+needs_bus = @item[:needs_bus] == "true" || @item[:needs_bus] == true
 "
 <form name = 'aero' action = 'aero.rb' method = 'post'>
 <input type = 'hidden' name = 'controller' value = 'Terminals'>
@@ -18,8 +19,8 @@
     </tr>
     <tr>
       <th>Автобус:</th>
-      <td>Нужен<input type = 'radio' name = 'item[needs_bus]' value = 'true' #{@item[:needs_bus] == "true" ? "checked" : ""}>
-          Не нужен<input type = 'radio' name = 'item[needs_bus]' value = 'false' #{@item[:needs_bus] != "true" ? "checked" : ""}></td>
+      <td>Нужен<input type = 'radio' name = 'item[needs_bus]' value = 'true' #{ "checked" if needs_bus }>
+          Не нужен<input type = 'radio' name = 'item[needs_bus]' value = 'false' #{ "checked" unless needs_bus }></td>
       
     </tr>
 <tr>
