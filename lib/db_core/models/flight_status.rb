@@ -10,7 +10,7 @@ class FlightStatus < Model
 CREATE TABLE flight_statuses(
   id serial PRIMARY KEY,
   flight_id integer REFERENCES flights(id) NOT NULL,
-  status_id integer NOT NULL CONSTRAINT status_id_ck CHECK(status_id in(0, 1, 2, 3)),
+  status_id integer NOT NULL CONSTRAINT status_id_ck CHECK(status_id in(0, 1, 2, 3, 4, 5, 6, 7)),
   event_date timestamp NOT NULL,
   UNIQUE(flight_id, event_date)
 ) WITH OIDS

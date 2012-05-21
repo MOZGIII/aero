@@ -48,9 +48,18 @@
       <th>Авиакомпания:</th>
       <td>#{companies_select('item[company_id]', "#{@item[:company_id]}")}</td>
     </tr>
+    <th>Терминал:</th>
+      <td>#{terminals_select('item[terminal_id]', "#{@item[:terminal_id]}")}</td>
+    </tr>
+    <th>Cтойка:</th>
+      <td>#{checkindesks_select('item[checkindesk_id]', "#{@item[:checkindesk_id]}")}</td>
+    </tr>
     <tr>
       <th>Каким рейс является для нашего аэропорта:</th>
       <td>#{is_departure_select('item[is_departure]', "#{@item[:is_departure]}")}</td>
+    </tr>
+    <th>Статус:</th>
+      <td>#{status_select('item[status]', "#{@item[:status]}")}</td>
     </tr>
   </tbody>
   <tfoot>

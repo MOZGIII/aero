@@ -18,6 +18,9 @@ CREATE TABLE flights(
   arrival_airport text NOT NULL,
   departure_airport text NOT NULL,
   company_id integer REFERENCES companies(id) NOT NULL,
+  terminal_id integer REFERENCES terminals(id),
+  checkindesk_id integer REFERENCES check_in_desks(id),
+  status integer ,
   is_departure boolean NOT NULL DEFAULT true
 ) WITH OIDS
         ")
@@ -39,12 +42,28 @@ CREATE TABLE flights(
       :arrival_airport => nil,
       :departure_airport => nil,
       :company_id => nil,
+      :terminal_id => nil,
+      :checkindesk_id => nil,
+      :status => nil,
       :is_departure => nil
     }
     attributes.each do |k, v|
       @attributes[k.to_sym] = v unless v.nil? or v == ''
     end
   end
+
+  def status()
+    a={
+'1'=>'рейс отложен',
+'2'=> 'рейс отменен',
+'3'=>'рейс на посадочной полосе',
+'4'=>'рейс взлетел',
+'5'=>'рейс сел',
+'6'=>'идет посадка на рейс',
+'7'=>'рейс запланирован'
+    }
+  a[self[:status].to_s]
+    end
 
   def company_name()
     @company.nil? ? '&nbsp;' : @company[:name]
@@ -54,11 +73,11 @@ CREATE TABLE flights(
     query = []
     res = []
     if departure.nil?
-      query = ["SELECT * FROM flights
+      query = ["SELECT flights.* FROM flights 
           ORDER BY departure_place, departure_date"]
     else
-      query = ["SELECT * FROM flights
-          WHERE is_departure = ?
+      query = ["SELECT * FROM flights 
+          WHERE is_departure = ? 
           ORDER BY departure_place, departure_date", departure]
     end
     connection.select_all(*query) do |r|

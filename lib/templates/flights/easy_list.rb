@@ -19,6 +19,15 @@ count = 0
       <th>
         Авиакомпания
       </th>
+      <th>
+        Терминал
+      </th>
+      <th>
+        Регистрационные стойки
+      </th>
+      <th>
+        Статус
+      </th>
     </tr>
   </thead>
   <tbody>
@@ -30,6 +39,9 @@ count = 0
       <td>#{i[:departure_place]}, #{i[:departure_airport]}: #{i[:departure_date]}</td>
       <td>#{i[:arrival_place]}, #{i[:arrival_airport]}: #{i[:arrival_date]}</td>
       <td>#{i.company_name()}</td>
+      <td>#{terminals_puts(i[:terminal_id])}</td> 
+      <td>#{checkindesks_puts(i[:checkindesk_id])}</td>
+      <td>#{i.status}</td>    
     </tr>
 "
 end.join("\n") + "
