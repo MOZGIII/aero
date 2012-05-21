@@ -21,7 +21,7 @@ When you have all of the above, you are ready to begin your work.
 
 Clone this repo and `cd` into it. Then do `vagrant up`.
 
-  cd aero/
+	cd aero/
 	vagrant up
 
 For the first time it will download and deploy virtual machine, it can take some time.
