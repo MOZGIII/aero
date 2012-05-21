@@ -7,7 +7,7 @@ class CheckInDesk < Model
       connection.do("
 CREATE TABLE check_in_desks(
     id serial PRIMARY KEY,
-    name varchar(16) UNIQUE NOT NULL,
+    name text UNIQUE NOT NULL,
     description text
 ) WITH OIDS
         ")
