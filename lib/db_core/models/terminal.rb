@@ -7,7 +7,7 @@ class Terminal < Model
       connection.do("
 CREATE TABLE terminals(
   id serial PRIMARY KEY,
-  name varchar(8) UNIQUE NOT NULL,
+  name text UNIQUE NOT NULL,
   description text,
   needs_bus boolean NOT NULL DEFAULT false
 ) WITH OIDS
