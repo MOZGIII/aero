@@ -51,3 +51,7 @@ If you are not on Windows you can use `vagrant ssh` to connect to ssh automatica
 If you're on Windows, configure PuTTY to `vagrant@127.0.0.1` with port `2222` and use Vagrant PuTTY key: http://dl.dropbox.com/u/38311510/vagrant/key.ppk.
 
 PS: you can import my PuTTY config from here: http://dl.dropbox.com/u/38311510/vagrant/putty.reg.
+
+### Finishing
+
+When you're done, use `sudo poweroff` from within the VM or use `vagrant halt` at the host.
