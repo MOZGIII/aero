@@ -9,10 +9,13 @@ PROJECT_ROOT=`pwd`
 
 echo "Creating PostgreSQL database in \"db\""
 export LC_ALL=ru_RU.UTF-8
+pg_ctl -D db stop
+rm -rf db/*
 initdb -D db
 
 echo "Running database on port $PORT"
 pg_ctl -D db -o "-i -p $PORT" start
+sleep 5
 
 echo "Creating user in the database"
 echo "CREATE USER worker WITH PASSWORD 'worker' CREATEDB;" | psql -p $PORT template1
@@ -30,7 +33,7 @@ ln -sf $PROJECT_ROOT/lib/stylesheets
 
 
 echo "Updating path to styles"
-sed -i s/"<link rel = 'stylesheet' href = '.*' type = 'text\/css'>"/"<link rel = 'stylesheet' href = '$LOGIN\/stylesheets\/aero.css' type = 'text\/css'>"/g $PROJECT_ROOT/lib/templates/layout/header.rb
+sed -i s/"<link rel = 'stylesheet' href = '.*' type = 'text\/css'>"/"<link rel = 'stylesheet' href = '\/$LOGIN\/stylesheets\/aero.css' type = 'text\/css'>"/g $PROJECT_ROOT/lib/templates/layout/header.rb
 
 echo "Updating port in db driver config"
 # Меняем в файле $PROJECT_ROOT/lib/db_core/db_driver.rb порт 5432 на мой_уникальный_порт

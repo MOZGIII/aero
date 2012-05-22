@@ -1,8 +1,10 @@
 #!/usr/local/bin/ruby
 # coding: UTF-8
 
-Encoding.default_external = "UTF-8"
-Encoding.default_internal = "UTF-8"
+if Object.const_defined?("Encoding")
+  Encoding.default_external = "UTF-8"
+  Encoding.default_internal = "UTF-8"
+end
 
 $: << "."
 $: << File.dirname(__FILE__)

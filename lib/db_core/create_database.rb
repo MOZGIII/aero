@@ -29,7 +29,7 @@ class CreateDatabase
   # Создание пустой БД
   def create_db()
     begin
-      @db_empty.do("CREATE DATABASE aero WITH ENCODING 'UTF8' LC_COLLATE='ru_RU.UTF-8' LC_CTYPE='ru_RU.UTF-8'")
+      @db_empty.do("CREATE DATABASE aero WITH ENCODING 'UTF8'")
       return 1
     rescue DBI::ProgrammingError => e
       return 0
